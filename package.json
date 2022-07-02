@@ -1,0 +1,22 @@
+{
+  "name": "doctorexample",
+  "version": "1.0.0",
+  "description": "A simple example to show the need for tests",
+  "main": "doctor-example.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibaultLesuisse/docker-example-bsi.git"
+  },
+  "author": "ThibaultLesuisse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThibaultLesuisse/docker-example-bsi/issues"
+  },
+  "homepage": "https://github.com/ThibaultLesuisse/docker-example-bsi#readme",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}
