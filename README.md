@@ -16,8 +16,12 @@ For nurses:
  - More than 20 or equal: x1,7
  - Never more than: 500 (throw an error)
  - Any other profession should not get a premium (but no error should be thrown)
- ```{
+
+```
+{
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
 } 
 ```
+
+The base could be any number but test for the following number: 200, 300, 500
