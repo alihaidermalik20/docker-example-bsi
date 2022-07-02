@@ -9,6 +9,7 @@ For doctors, the rules are as following:
  - More than 10 or equal: x2
  - More than 20 or equal: x3
  - Never more than: 1000 (throw an error)
+
 For nurses:
  - Less than 10-year experience: x1,2
  - More than 10 or equal: x1,3
@@ -17,7 +18,7 @@ For nurses:
  - Never more than: 500 (throw an error)
  - Any other profession should not get a premium (but no error should be thrown)
 
-```
+```json
 {
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
