@@ -47,7 +47,7 @@
 // };
 // bonus(alex, 200);
 
-function bonus(employee, premium) {
+function bonus(employee = {}, premium = 0) {
   let payout = 0;
   if (employee.profession === 'doctor') {
     if (employee.experience >= 10 && employee.experience < 20) {
@@ -179,5 +179,23 @@ for (const solution of [bonus]) {
         }
       })
     });
+    describe('gives 0 bonus to all other professions', () => {
+      for (let i = 0; i <= 55; i++) {
+        it('returns 0 at all experience levels for janitors with premium 200', () => {
+          expect(solution({profession: 'janitor', experience: i}, 200)).toBe(0);
+        })
+        it('returns 0 at all experience levels for janitors with premium 400', () => {
+          expect(solution({profession: 'janitor', experience: i}, 400)).toBe(0);
+        })
+        it('returns 0 at all experience levels for janitors with premium 600', () => {
+          expect(solution({profession: 'janitor', experience: i}, 600)).toBe(0);
+        })
+      }
+    })
+    describe('gives 0 bonus if premium is not passed and is be default 0', () => {
+      it('returns 0 for profession doctor if no premium is passed', () => {
+        expect(solution({profession: 'doctor'})).toBe(0);
+      })
+    })
   });
 }
